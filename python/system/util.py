@@ -1,20 +1,13 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Utility Functions
 The following functions give you access to view various Gateway and
 Client data, as well as interact with other various systems."""
 
 __all__ = [
-    'beep',
-    'getGatewayAddress',
-    'getProjectName',
-    'getProperty',
-    'jsonDecode',
-    'jsonEncode',
-    'setLocale',
-    'translate'
+    'beep', 'getGatewayAddress', 'getProjectName', 'getProperty', 'jsonDecode',
+    'jsonEncode', 'setLocale', 'translate'
 ]
 
 
@@ -167,3 +160,8 @@ def translate(term):
         str: The translated term.
     """
     return term
+
+
+def getLogger(name):
+    import logging
+    return logging.getLogger(name)

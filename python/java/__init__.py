@@ -1,5 +1,2 @@
-# Copyright (C) 2018
-# Author: Cesar Roman
-# Contact: thecesrom@gmail.com
-
-"""Java package."""
+from . import lang
+from . import util

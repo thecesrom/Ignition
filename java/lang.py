@@ -59,3 +59,7 @@ class System(object):
         """
         import system.date
         return system.date.toMillis(system.date.now())
+
+    @staticmethod
+    def getProperty(property_key):
+        return property_key

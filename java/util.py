@@ -67,3 +67,22 @@ class Locale(object):
     @property
     def English(self):
         return self.__init__('eng')
+
+
+class GregorianCalendar:
+
+    def __init__(self):
+        pass
+
+    def add(self, unit, amount):
+        pass
+
+
+class Calendar:
+
+    @staticmethod
+    def getInstance():
+        return GregorianCalendar()
+
+
+Calendar.DAY_OF_MONTH = 'DAY_OF_MONTH'

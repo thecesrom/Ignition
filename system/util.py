@@ -164,6 +164,7 @@ def translate(term):
 
 def getLogger(name):
     import logging
+    logging.basicConfig()
     logger = logging.getLogger(name)
     logger.err = logger.error
     return logger

@@ -1,14 +1,10 @@
 # Copyright (C) 2018
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Provides classes that are fundamental to the design of the Java
 programming language."""
 
-__all__ = [
-    'Exception',
-    'System'
-]
+__all__ = ['Exception', 'System']
 
 
 class Exception(object):

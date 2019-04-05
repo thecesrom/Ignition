@@ -1,16 +1,11 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """GUI Functions
 The following functions allow you to control windows and create popup
 interfaces."""
 
-__all__ = [
-    'confirm',
-    'errorBox',
-    'messageBox'
-]
+__all__ = ['confirm', 'errorBox', 'messageBox']
 
 # Constants
 ACCL_NONE = 0

@@ -1,22 +1,16 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """User Functions
 The following functions give you access to view and edit users in the
 Gateway."""
 
-__all__ = [
-    'User',
-    'getUsers',
-    'getUser'
-]
+__all__ = ['User', 'getUsers', 'getUser']
 
 
 class ContactInfo(object):
-    def __init__(self,
-                 contactType=None,
-                 value=None):
+
+    def __init__(self, contactType=None, value=None):
         self.contactType = contactType
         self.value = value
 

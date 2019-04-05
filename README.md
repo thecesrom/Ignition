@@ -11,8 +11,7 @@ This allows a local programmer to appropriately import and use autocomplete on
 a local copy of an Ignition project.
 
 ## Setup
-Install all of these libraries to work locally from within the `python/` 
-directory with
+Install all of these libraries to work locally with
 ```bash
 python2 setup.py install
 ```

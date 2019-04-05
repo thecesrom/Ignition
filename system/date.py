@@ -1,51 +1,17 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Ignition date module."""
 
 __all__ = [
-    'addDays',
-    'addHours',
-    'addMillis',
-    'addMinutes',
-    'addMonths',
-    'addSeconds',
-    'addWeeks',
-    'addYears',
-    'daysBetween',
-    'format',
-    'fromMillis',
-    'getAMorPM',
-    'getDate',
-    'getDayOfMonth',
-    'getDayOfWeek',
-    'getDayOfYear',
-    'getHour12',
-    'getHour24',
-    'getMillis',
-    'getMinute',
-    'getMonth',
-    'getQuarter',
-    'getSecond',
-    'getTimezone',
-    'getTimezoneOffset',
-    'getTimezoneRawOffset',
-    'getYear',
-    'hoursBetween',
-    'isAfter',
-    'isBefore',
-    'midnight',
-    'millisBetween',
-    'minutesBetween',
-    'monthsBetween',
-    'now',
-    'parse',
-    'secondsBetween',
-    'setTime',
-    'toMillis',
-    'weeksBetween',
-    'yearsBetween'
+    'addDays', 'addHours', 'addMillis', 'addMinutes', 'addMonths', 'addSeconds',
+    'addWeeks', 'addYears', 'daysBetween', 'format', 'fromMillis', 'getAMorPM',
+    'getDate', 'getDayOfMonth', 'getDayOfWeek', 'getDayOfYear', 'getHour12',
+    'getHour24', 'getMillis', 'getMinute', 'getMonth', 'getQuarter',
+    'getSecond', 'getTimezone', 'getTimezoneOffset', 'getTimezoneRawOffset',
+    'getYear', 'hoursBetween', 'isAfter', 'isBefore', 'midnight',
+    'millisBetween', 'minutesBetween', 'monthsBetween', 'now', 'parse',
+    'secondsBetween', 'setTime', 'toMillis', 'weeksBetween', 'yearsBetween'
 ]
 
 from datetime import datetime, timedelta
@@ -372,7 +338,7 @@ def getQuarter(date):
     Returns:
         int: An integer that is representative of the extracted value.
     """
-    print ((date.month - 1) // 3) + 1
+    print((date.month - 1) // 3) + 1
 
 
 def getSecond(date):
@@ -556,7 +522,8 @@ def now():
     return datetime.now()
 
 
-def parse(dateString, formatString='yyyy-MM-dd HH:mm:ss', locale=Locale.English):
+def parse(dateString, formatString='yyyy-MM-dd HH:mm:ss',
+          locale=Locale.English):
     """Attempts to parse a string and create a Date. Causes
     ParseException if the date dateString parameter is in an
     unrecognized format.

@@ -3,10 +3,10 @@
 
 from setuptools import setup
 
-with open('../README.md', 'r') as fin:
+with open('README.md', 'r') as fin:
     readme = fin.read()
 
-with open('../requirements.txt', 'r') as fin:
+with open('requirements.txt', 'r') as fin:
     requirements = [e.strip() for e in fin.readlines()]
 
 common_args = {

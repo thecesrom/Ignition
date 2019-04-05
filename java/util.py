@@ -1,16 +1,12 @@
 # Copyright (C) 2018
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Contains the collections framework, legacy collection classes,
 event model, date and time facilities, internationalization, and
 miscellaneous utility classes (a string tokenizer, a random-number
 generator, and a bit array)."""
 
-__all__ = [
-    'Date',
-    'Locale'
-]
+__all__ = ['Date', 'Locale']
 
 
 class Date(object):
@@ -56,10 +52,7 @@ class Locale(object):
     country, region, or culture.
     """
 
-    def __init__(self,
-                 language,
-                 country=None,
-                 variant=None):
+    def __init__(self, language, country=None, variant=None):
         """Locale initializer.
 
         Args:

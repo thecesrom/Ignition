@@ -1,16 +1,11 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Dataset Functions
 The following functions give you access to view and interact with
 datasets."""
 
-__all__ = [
-    'getColumnHeaders',
-    'toDataSet',
-    'toPyDataSet'
-]
+__all__ = ['getColumnHeaders', 'toDataSet', 'toPyDataSet']
 
 
 def getColumnHeaders(dataset):

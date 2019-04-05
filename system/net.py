@@ -2,19 +2,21 @@
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
 # pylint: disable=C0103,R0913
-
 """Net Functions
 The following functions give you access to interact with http services."""
 
-__all__ = [
-    'httpGet',
-    'sendEmail'
-]
+__all__ = ['httpGet', 'sendEmail']
 
 
-def httpGet(url, connectTimeout=10000, readTimeout=60000, username=None,
-            password=None, headerValues=None, bypassCertValidation=None,
-            useCaches=True, throwOnError=True):
+def httpGet(url,
+            connectTimeout=10000,
+            readTimeout=60000,
+            username=None,
+            password=None,
+            headerValues=None,
+            bypassCertValidation=None,
+            useCaches=True,
+            throwOnError=True):
     """Retrieves the document at the given URL using the HTTP GET
     protocol. The document is returned as a string. For example, if
     you use the URL of a website, you'll get the same thing you'd get

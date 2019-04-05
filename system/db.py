@@ -1,18 +1,13 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Database Functions
 The following functions give you access to view and modify data in the
 database."""
 
 __all__ = [
-    'beginTransaction',
-    'closeTransaction',
-    'commitTransaction',
-    'createSProcCall',
-    'execSProcCall',
-    'rollbackTransaction'
+    'beginTransaction', 'closeTransaction', 'commitTransaction',
+    'createSProcCall', 'execSProcCall', 'rollbackTransaction'
 ]
 
 # Type codes
@@ -65,6 +60,7 @@ SERIALIZABLE = 8
 
 
 class SProcCall(object):
+
     def __init__(self):
         pass
 

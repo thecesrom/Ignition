@@ -2,15 +2,11 @@
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
 # pylint: disable=C0103
-
 """Navigation Functions
 The following functions allow you to open and close windows in the
 client."""
 
-__all__ = [
-    'getCurrentWindow',
-    'swapWindow'
-]
+__all__ = ['getCurrentWindow', 'swapWindow']
 
 
 def getCurrentWindow():

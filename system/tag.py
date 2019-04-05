@@ -1,29 +1,19 @@
 # Copyright (C) 2017
 # Author: Cesar Roman
 # Contact: thecesrom@gmail.com
-
 """Tag Functions
 The following functions give you access to interact with Ignition
 Tags."""
 
 __all__ = [
-    'browseTags',
-    'browseTagsSimple',
-    'read',
-    'readAll',
-    'write',
-    'writeAll'
+    'browseTags', 'browseTagsSimple', 'read', 'readAll', 'write', 'writeAll'
 ]
 
 
 class BrowseTag(object):
     """BrowseTag class."""
 
-    def __init__(self,
-                 name=None,
-                 path=None,
-                 _type=None,
-                 dataType=None):
+    def __init__(self, name=None, path=None, _type=None, dataType=None):
         """BrowseTag initializer.
 
         Args:
@@ -62,17 +52,19 @@ class BrowseTag(object):
 class QualifiedValue(object):
     """QualifiedValue class"""
 
-    def __init__(self,
-                 value=None,
-                 quality=None,
-                 timestamp=None):
+    def __init__(self, value=None, quality=None, timestamp=None):
         self.value = value
         self.quality = quality
         self.timestamp = timestamp
 
 
-def browseTags(parentPath, tagPath=None, tagType=None, dataType=None,
-               udtParentType=None, recursive=False, sort='ASC'):
+def browseTags(parentPath,
+               tagPath=None,
+               tagType=None,
+               dataType=None,
+               udtParentType=None,
+               recursive=False,
+               sort='ASC'):
     """Returns an array of tags from a specific folder. The function
     supports filtering and recursion. Leave filters blank to return
     all tags.
@@ -111,8 +103,8 @@ def browseTags(parentPath, tagPath=None, tagType=None, dataType=None,
             and the following functions: isFolder(), isUDT(), isOPC(),
             isMemory(), isExpression(), isQuery().
     """
-    print(parentPath, tagPath, tagType, dataType,
-          udtParentType, recursive, sort)
+    print(parentPath, tagPath, tagType, dataType, udtParentType, recursive,
+          sort)
     return [BrowseTag()]
 
 

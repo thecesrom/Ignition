@@ -43,3 +43,9 @@ setup(
     description='The Igntition javax mock library.',
     packages=['javax'],
     **common_args)
+setup(
+    name='org',
+    version='0.1',
+    description='The Igntition org mock library.',
+    packages=['org'],
+    **common_args)

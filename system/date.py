@@ -522,8 +522,9 @@ def now():
     return datetime.now()
 
 
-def parse(dateString, formatString='yyyy-MM-dd HH:mm:ss',
-          locale=Locale.English):
+def parse(dateString,
+          formatString='yyyy-MM-dd HH:mm:ss',
+          locale=Locale.ENGLISH):
     """Attempts to parse a string and create a Date. Causes
     ParseException if the date dateString parameter is in an
     unrecognized format.

@@ -6,7 +6,9 @@ The following functions give you access to interact with Ignition
 Tags."""
 
 __all__ = [
-    'browseTags', 'browseTagsSimple', 'read', 'readAll', 'write', 'writeAll'
+    'browseTags', 'browseTagsSimple', 'browseConfiguration', 'read', 'readAll', 'write', 'writeAll', 'writeSynchronous', 'writeValue',
+    ## Classes below are added for use in unit tests. Note that ignition does not expose these directly
+    'QualifiedValue', 'TagConfiguration', 'TagProperty', 'TagDataType'
 ]
 
 
@@ -58,6 +60,77 @@ class QualifiedValue(object):
         self.timestamp = timestamp
 
 
+class TagConfiguration(object):
+
+    def __init__(self, name=None, folder_path=None, parameters=None, properties=dict(), alarms=None, sub_tags=None, tag_type=None):
+        self.name = name
+        self.folder_path = folder_path
+        self.parameters = parameters
+        self.properties = properties
+        self.alarms = alarms
+        self.sub_tags = sub_tags
+        self.tag_type = tag_type
+
+    def getName(self):
+        return self.name
+
+    def getAlarms(self):
+        return self.alarms
+
+    def getFolderPath(self):
+        return self.folder_path
+
+    def getFullPath(self):
+        return self.folder_path + "/" + self.name
+
+    def getParameters(self):
+        return self.parameters
+
+    def getProperties(self):
+        return self.properties.keys()
+
+    def get(self, property_key):
+        return self.properties[property_key]
+
+    def getSubTags(self):
+        return self.sub_tags
+
+    def getTagType(self):
+        return self.tag_type
+
+class TagProperty(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    def getName(self):
+        return self.name
+
+class TagDataType(object):
+    """
+    Fairly hackily defined. Currently just has the minimum functionality
+    for the the tests that use it
+    """
+
+    def __init__(self, type_name):
+        self.type_name = type_name
+
+    def __str__(self):
+        return self.type_name
+
+    def isNumeric(self):
+        if "int" in self.type_name.lower() or "float" in self.type_name.lower():
+            return True
+        else:
+            return False
+
+
+
+
+def browseConfiguration(tagPath, recursive):
+    return [TagConfiguration()]
+
+
 def browseTags(parentPath,
                tagPath=None,
                tagType=None,
@@ -106,7 +179,6 @@ def browseTags(parentPath,
     print(parentPath, tagPath, tagType, dataType, udtParentType, recursive,
           sort)
     return [BrowseTag()]
-
 
 def browseTagsSimple(parentPath, sort):
     """Returns a sorted array of tags from a specific folder.
@@ -196,7 +268,6 @@ def write(tagPath, value, suppressErrors=False):
     print(tagPath, value, suppressErrors)
     return 1
 
-
 def writeAll(tagPaths, values):
     """Performs an asynchronous bulk write. Takes two sequences that
     must have the same number of entries. The first is the list of tag
@@ -215,3 +286,9 @@ def writeAll(tagPaths, values):
     """
     print(tagPaths, values)
     return [1] * len(tagPaths)
+
+def writeSynchronous(tagPath, value):
+    pass
+
+def writeValue(tagPath, value):
+    pass

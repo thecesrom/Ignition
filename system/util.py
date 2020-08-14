@@ -116,7 +116,10 @@ def jsonDecode(jsonString):
     Returns:
         dict: The decoded Python object.
     """
-    import json
+    try:
+        import json
+    except ImportError:
+        import simplejson as json
     return json.loads(jsonString)
 
 
@@ -133,7 +136,10 @@ def jsonEncode(pyObj, indentFactor=4):
     Returns:
         str: The encoded JSON string.
     """
-    import json
+    try:
+        import json
+    except ImportError:
+        import simplejson as json
     return json.dumps(pyObj, indent=indentFactor)
 
 

@@ -83,10 +83,9 @@ Before you begin, ensure you have met the following requirements:
 To use Ignition, download the code targeted to your desired version from the [releases page](https://github.com/thecesrom/Ignition/releases) and add it as a dependency to your scripting project.
 
 ### PyCharm Installation
-To use Ignition in PyCharm, you will need to add it to your project. The following process is the same whether you use regular CPython or Jython.
-1. Navigate to `File > Settings > Project: [your project] > Python Interpreter` and click on the small gear icon.
-2. Choose `Show all` and then click on the last button on the top menu shaped like a folder structure (tooltip is `Show paths for the selected interpreter`).
-3. Click the `+` button and select the `src/` folder within the Ignition repository you cloned.
+To use Ignition in PyCharm, you will need to attach it to your project.
+1. With the project you want to use with Ignition open, navigate to `File > Open` and select the `Ignition/src` project folder.
+2. Choose `Attach` when prompted to attach it to your existing project.
 
 ## Packages
 

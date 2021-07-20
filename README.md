@@ -84,8 +84,9 @@ To use Ignition, download the code targeted to your desired version from the [re
 
 ### PyCharm Installation
 To use Ignition in PyCharm, you will need to attach it to your project.
-1. With the project you want to use with Ignition open, navigate to `File > Open` and select the `Ignition/src` project folder.
-2. Choose `Attach` when prompted to attach it to your existing project.
+1. With your project open that you want to use with Ignition, navigate to `File > Open` and select the `Ignition` project folder.
+2. Choose `Attach` when you're prompted on how to open the project.
+3. Under the new `Ignition` project folder, right click on the `src/` folder and choose `Mark Directory as > Sources Root`.
 
 ## Packages
 

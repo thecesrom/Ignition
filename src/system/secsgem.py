@@ -126,7 +126,7 @@ def enableDisableEquipment(enable, names):
     print(enable)
     for name in names:
         print(name)
-    return [u""]
+    return [""]
 
 
 def getResponse(transactionID, equipment, timeout=5, poll=150):
